@@ -1,0 +1,453 @@
+"команда_python2":"команда__python3"
+"str.split()" : "str.split(sep=None, maxsplit=-1)"
+"str.join()" : "str.join(iterable)"
+"str.replace()" : "str.replace(old, new, count=-1)"
+"str.find()" : "str.find(sub[, start[, end]])"
+"str.lower()" : "str.lower()"
+"str.upper()" : "str.upper()
+
+
+Словари и списки:
+"dict.items()": "dict.items()"
+"dict.keys()": "dict.keys()"
+"dict.values()": "dict.values()"
+"list.append()": "list.append(x)" 
+"list.remove()": "list.remove(x)"
+"list.pop()": "list.pop([i])"
+"list.sort()": "list.sort(*, key=None, reverse=False)"
+
+Пакеты и модули:
+# Основная структура пакета
+    "__init__.py (обязательный)" : "__init__.py (необязательный для namespace packages, но рекомендуемый)",
+    
+    # Импорты
+    "import module" : "import module",
+    "from . import module" : "from . import module",
+    "from .module import name" : "from .module import name",
+    
+    # Специальные переменные
+    "__all__ = ['name1', 'name2']" : "__all__ = ['name1', 'name2']",
+    "__version__ = '1.0'" : "__version__ = '1.0'",
+    
+    # Инициализация пакета
+    "print('Инициализация пакета')" : "print('Инициализация пакета')",
+    
+    # Устаревшее
+    "from package import * (без all__)" : "from package import * (требует __all для явного экспорта)"
+
+
+ 
+"print 'text'":"print('text')"
+"print >>sys.stderr, 'error'" : "print('error', file=sys.stderr)"
+"raw_input()" : "input()"
+division оператор
+"unicode('текст')" : "str('текст')"
+"xrange(10)" : "range(10)"
+"dict.iteritems()" : "dict.items()"
+"dict.iterkeys()" : "dict.keys()"
+"dict.itervalues()" : "dict.values()"
+"except Exception, e:" : "except Exception as e:"
+ r"\command{param}" : "command{param}"
+ r"\command[opt]{req}" : "command[opt]{req}"
+ r"\release{1.0}" : "release{1.0}" 
+
+
+
+
+"operator.abs()" : "abs()"
+    "operator.add()" : "operator.add() or +"
+    "operator.and_()" : "operator.and_() or &"
+    
+    # Module and object structure
+    "__builtin__ module" : "builtins module"
+    "rfc822.AddressList" : "email.utils.AddressList"
+    
+    # Special attributes and variables
+    "__all__ (optional module attribute)" : "__all__ (still optional)"
+    "__bases__ (class attribute)" : "__bases__ (unchanged)"
+    "(package variable)" : "(package variable - same)"
+    
+    # Object methods
+    "object.__abs__()" : "object.__abs__()"
+    "object.__add__()" : "object.__add__()"
+
+# Object methods and special methods
+    "object.__call__()" : "object.__call__()"
+    "instance.__class__" : "instance.__class__"
+    "object.__cmp__()" : "(removed, use lt, eq, etc.)"
+    "object.__coerce__()" : "(removed)"
+    "object.__complex__()" : "object.__complex__()"
+    "operator.concat()" : "operator.concat() or +"
+    "object.__contains__()" : "object.__contains__()"
+    
+    # Email/message methods
+    "email.message.Message.__contains__()" : "email.message.Message.__contains__()"
+    "email.message.Message.__delitem__()" : "email.message.Message.__delitem__()"
+    "mailbox.Mailbox.__contains__()" : "mailbox.Mailbox.__contains__()"
+    
+    # Copy operations
+    "copy.copy()" : "copy.copy()"
+    "copy.deepcopy()" : "copy.deepcopy()"
+    
+    # Deletion operations
+    "object.__del__()" : "object.__del__()"
+    "object.__delattr__()" : "object.__delattr__()"
+    "object.__delete__()" : "object.__delete__()"
+    
+    # Debug and built-ins
+    "__debug__" : "__debug__"
+
+ # Operator module methods
+    "operator.__delslice__()" : "(removed in Python 3)"
+    "operator.div()" : "operator.floordiv()",  # For integer division
+    
+    # Special methods
+    "object.__delslice__()" : "(removed in Python 3)",
+    "object.__div__()" : "object.__truediv__()",  # For / operator
+    "object.__floordiv__()" : "object.__floordiv__()",  # For // operator
+    "object.__divmod__()" : "object.__divmod__()",
+    
+    # Dictionary-related
+    "dict" : "dict",
+    "instance.__dict__" : "instance.__dict__",
+    "class.__dict__" : "class.__dict__",
+    "function.__dict__" : "function.__dict__",
+    "module.__dict__" : "module.__dict__",
+    
+    # Documentation attributes
+    "object.__doc__" : "object.__doc__",
+    "class.__doc__" : "class.__doc__",
+    "function.__doc__" : "function.__doc__",
+    "method.__doc__" : "method.__doc__",
+    
+    # System functions
+    "sys.displayhook" : "sys.displayhook",
+    
+    # Mailbox methods
+    "mailbox.MH.method()" : "mailbox.MH.method()",  # Methods remain but module was reorganized
+    "mailbox.Mailbox.method()" : "mailbox.Mailbox.method()"
+
+# Context manager methods
+    "object.__enter__()" : "object.__enter__()",
+    "object.__exit__()" : "object.__exit__()",
+    "contextmanager.__enter__()" : "contextmanager.__enter__()",
+    "contextmanager.__exit__()" : "contextmanager.__exit__()",
+    
+    # Comparison methods
+    "operator.eq()" : "operator.eq() or ==",
+    "object.__eq__()" : "object.__eq__()",
+    "email.charset.Charset.__eq__()" : "email.charset.Charset.__eq__()",
+    "email.header.Header.__eq__()" : "email.header.Header.__eq__()",
+    
+    # System hooks
+    "sys.excepthook" : "sys.excepthook",
+    
+    # Windows specific
+    "_winreg.PyHKEY.__enter__()" : "winreg.PyHKEY.__enter__()",
+    "_winreg.PyHKEY.__exit__()" : "winreg.PyHKEY.__exit__()",
+    
+    # Numeric operations
+    "object.__float__()" : "object.__float__()",
+    "operator.floordiv()" : "operator.floordiv() or //",
+    "object.__floordiv__()" : "object.__floordiv__()",
+    
+    # Future and formatting
+    "__future__ module" : "__future__ module",
+    "object.__format__()" : "object.__format__()",
+    
+    # File handling (note major changes)
+    "file type" : "(removed, use io.IOBase)",
+    "module.__file__" : "module.__file__"
+
+# Comparison methods
+    "operator.ge()" : "operator.ge() or >=",
+    "object.__ge__()" : "object.__ge__()",
+    "operator.gt()" : "operator.gt() or >",
+    "object.__gt__()" : "object.__gt__()",
+
+    # Attribute/item access
+    "object.__getattr__()" : "object.__getattr__()",
+    "object.__getattribute__()" : "object.__getattribute__()",
+    "object.__getitem__()" : "object.__getitem__()",
+    "operator.getitem()" : "operator.getitem() or []",
+    "email.message.Message.__getitem__()" : "email.message.Message.__getitem__()",
+    "mailbox.Mailbox.__getitem__()" : "mailbox.Mailbox.__getitem__()",
+
+    # Special methods
+    "object.__getinitargs__()" : "object.__getinitargs__()",
+    "object.__getnewargs__()" : "object.__getnewargs__()",
+    "object.__getstate__()" : "object.__getstate__()",
+    "object.__hash__()" : "object.__hash__()",
+    "object.__hex__()" : "(removed, use __index__())",
+
+    # In-place operators
+    "operator.iadd()" : "operator.iadd() or +=",
+    "object.__iadd__()" : "object.__iadd__()",
+    "operator.iand()" : "operator.iand() or &=",
+    "object.__iand__()" : "object.__iand__()",
+    "operator.iconcat()" : "operator.iconcat() or +=",
+    "operator.idiv()" : "operator.itruediv() or /=",
+    "object.__idiv__()" : "object.__itruediv__()",
+    "operator.ifloordiv()" : "operator.ifloordiv() or //=",
+    "object.__ifloordiv__()" : "object.__ifloordiv__()",
+    "operator.ilshift()" : "operator.ilshift() or <<=",
+    "object.__ilshift__()" : "object.__ilshift__()",
+    "operator.imod()" : "operator.imod() or %=",
+    "object.__imod__()" : "object.__imod__()",
+
+    # Import system
+    "__import__()" : "__import__()",
+    "import statement" : "import statement",
+
+    # Removed items
+    "operator.getslice()" : "(removed, use getitem with slices)",
+    "object.__getslice__()" : "(removed, use getitem with slices)",
+    "rfc822.AddressList.__iadd__()" : "email.utils.AddressList.__iadd__()"
+# Built-in functions
+    "__import__()" : "__import__()",
+    "builtin_function" : "builtin_function",
+
+    # Operator module methods
+    "operator.imul()" : "operator.imul() or *=",
+    "operator.index()" : "operator.index()",
+    "operator.inv()" : "operator.inv() or ~",
+    "operator.invert()" : "operator.invert() or ~",
+    "operator.ior()" : "operator.ior() or |=",
+    "operator.ipow()" : "operator.ipow() or **=",
+    "operator.irepeat()" : "(removed)",
+    "operator.irshift()" : "operator.irshift() or >>=",
+    "operator.isub()" : "operator.isub() or -=",
+    "operator.itruediv()" : "operator.itruediv() or /=",
+    "operator.ixor()" : "operator.ixor() or ^=",
+
+    # Special methods
+    "object.__imul__()" : "object.__imul__()",
+    "object.__index__()" : "object.__index__()",
+    "object.__init__()" : "object.__init__()",
+    "object.__int__()" : "object.__int__()",
+    "object.__invert__()" : "object.__invert__()",
+    "object.__ior__()" : "object.__ior__()",
+    "object.__ipow__()" : "object.__ipow__()",
+    "object.__irshift__()" : "object.__irshift__()",
+    "object.__isub__()" : "object.__isub__()",
+    "object.__iter__()" : "object.__iter__()",
+    "object.__itruediv__()" : "object.__itruediv__()",
+    "object.__ixor__()" : "object.__ixor__()",
+
+    # Class methods
+    "class.__instancecheck__()" : "class.__instancecheck__()",
+
+    # Module specific methods
+    "logging.Handler.__init__()" : "logging.Handler.__init__()",
+    "mailbox.Mailbox.__iter__()" : "mailbox.Mailbox.__iter__()",
+    "rfc822.AddressList.__isub__()" : "email.utils.AddressList.__isub__()",
+
+    # Container/iterator protocols
+    "container.__iter__()" : "container.__iter__()",
+    "iterator.__iter__()" : "iterator.__iter__()"
+
+# Comparison methods
+    "operator.le()" : "operator.le() or <=",
+    "object.__le__()" : "object.__le__()",
+    "operator.lt()" : "operator.lt() or <",
+    "object.__lt__()" : "object.__lt__()",
+
+    # Length protocol
+    "object.__len__()" : "object.__len__()",
+    "email.message.Message.__len__()" : "email.message.Message.__len__()",
+    "mailbox.Mailbox.__len__()" : "mailbox.Mailbox.__len__()",
+    "mapping.__len__()" : "mapping.__len__()",
+    "rfc822.AddressList.__len__()" : "email.utils.AddressList.__len__()",
+
+    # Bitwise operations
+    "operator.lshift()" : "operator.lshift() or <<",
+    "object.__lshift__()" : "object.__lshift__()",
+
+    # Type conversion
+    "object.__long__()" : "(removed, use __int__())",
+
+    # Module system
+    "__loader__" : "__loader__",
+    "__main__" : "__main__",
+    "module" : "module"
+
+# Modules and imports
+    "__builtin__" : "builtins",
+    "__future__" : "__future__",
+    "__main__" : "__main__",
+    "_winreg" : "winreg",
+    "urlparse" : "urllib.parse",
+    "from fractions import" : "from fractions import",
+    "from collections import" : "from collections import",
+    "import sys" : "import sys",
+    "import plistlib" : "import plistlib",
+    "import datetime" : "import datetime",
+    "import logging" : "import logging",
+    "import logging.config" : "import logging.config",
+    "msvcrt" : "msvcrt",
+
+    # Functions and methods
+    "print sorted(kw)" : "print(sorted(kw))",
+    "t.index()" : "t.index()",
+    "complex()" : "complex()",
+    "exit()" : "exit()",
+    "sys.getwindowsversion()" : "sys.getwindowsversion()",
+    "get_config_vars()" : "get_config_vars()",
+    "is_python_build()" : "is_python_build()",
+    "is_canonical()" : "is_canonical()",
+    "assertIs()" : "assertIs()",
+    "object.__init__()" : "object.__init__()",
+
+    # Dictionary operations
+    "del d['second']" : "del d['second']",
+    "_asdict()" : "_asdict()",
+
+    # Class definitions
+    "class C():" : "class C:",
+    "class C.hash = None" : "class C.hash = None",
+
+    # Context managers
+    "with A() as a, B() as b:" : "with A() as a, B() as b:",
+
+    # Documentation markup (kept as-is)
+    r"\bfcode{text}" : r"\bfcode{text}",
+    r"\cdata{name}" : r"\cdata{name}",
+    r"\cfunction{name}" : r"\cfunction{name}",
+    r"\character{char}" : r"\character{char}",
+    r"\citetitle[url]{title}" : r"\citetitle[url]{title}",
+    r"\class{name}" : r"\class{name}",
+    r"\code{text}" : r"\code{text}",
+    r"\constant{name}" : r"\constant{name}",
+    r"\ctype{name}" : r"\ctype{name}",
+    r"\deprecated{version}{what to do}" : r"\deprecated{version}{what to do}",
+    r"\dfn{term}" : r"\dfn{term}",
+
+    # Low-level/C-specific (unchanged)
+    "void *vtable;" : "void *vtable;"
+
+# Documentation markup commands (all remain identical in Python 3)
+    r"\e" : r"\e",
+    r"\email{address}" : r"\email{address}",
+    r"\emph{text}" : r"\emph{text}",
+    r"\envvar{name}" : r"\envvar{name}",
+    r"\exception{name}" : r"\exception{name}",
+    r"\file{file or dir}" : r"\file{file or dir}",
+    r"\filenq{file or dir}" : r"\filenq{file or dir}",
+    r"\function{name}" : r"\function{name}",
+    r"\infinity" : r"\infinity",
+    r"\kbd{key sequence}" : r"\kbd{key sequence}",
+    r"\keyword{name}" : r"\keyword{name}",
+    r"\mailheader{name}" : r"\mailheader{name}",
+    r"\makevar{name}" : r"\makevar{name}",
+    r"\manpage{name}{section}" : r"\manpage{name}{section}",
+    r"\member{name}" : r"\member{name}",
+    r"\method{name}" : r"\method{name}",
+    r"\mimetype{name}" : r"\mimetype{name}",
+    r"\module{name}" : r"\module{name}",
+    r"\newsgroup{name}" : r"\newsgroup{name}",
+    r"\note{text}" : r"\note{text}",
+    r"\pep{number}" : r"\pep{number}",
+    r"\plusminus" : r"\plusminus",
+    r"\program{name}" : r"\program{name}",
+    r"\programopt{option}" : r"\programopt{option}",
+    r"\longprogramopt{option}" : r"\longprogramopt{option}",
+    r"\refmodule[key]{name}" : r"\refmodule[key]{name}",
+    r"\regexp{string}" : r"\regexp{string}",
+    r"\rfc{number}" : r"\rfc{number}",
+    r"\samp{text}" : r"\samp{text}",
+    r"\shortversion" : r"\shortversion",
+    r"\strong{text}" : r"\strong{text}",
+    r"\ulink{text}{url}" : r"\ulink{text}{url}",
+    r"\url{url}" : r"\url{url}",
+    r"\var{name}" : r"\var{name}",
+    r"\version" : r"\version",
+    r"\versionadded[explanation]{version}" : r"\versionadded[explanation]{version}",
+    r"\versionchanged[explanation]{version}" : r"\versionchanged[explanation]{version}",
+    r"\warning{text}" : r"\warning{text}",
+    r"\declaremodule[key]{type}{name}" : r"\declaremodule[key]{type}{name}",
+    r"\platform{specifier}" : r"\platform{specifier}",
+    r"\modulesynopsis{text}" : r"\modulesynopsis{text}",
+    r"\moduleauthor{name}{email}" : r"\moduleauthor{name}{email}",
+    r"\localmoduletable" : r"\localmoduletable",
+    r"\release{ver}" : r"\release{ver}",
+    r"\setshortversion{sver}" : r"\setshortversion{sver}"
+
+# Sectioning commands (remain identical)
+    r"\chapter" : r"\chapter",
+    r"\section" : r"\section",
+    r"\subsection" : r"\subsection",
+    r"\subsubsection" : r"\subsubsection",
+    r"\paragraph" : r"\paragraph",
+    r"\subparagraph" : r"\subparagraph",
+
+    # Environment blocks (remain identical)
+    r"\begin{abstract}" : r"\begin{abstract}",
+    r"\begin{alltt}" : r"\begin{alltt}",
+    r"\begin{description}" : r"\begin{description}",
+    r"\begin{displaymath}" : r"\begin{displaymath}",
+    r"\begin{document}" : r"\begin{document}",
+    r"\begin{enumerate}" : r"\begin{enumerate}",
+    r"\begin{figure}" : r"\begin{figure}",
+    r"\begin{flushleft}" : r"\begin{flushleft}",
+    r"\begin{itemize}" : r"\begin{itemize}",
+    r"\begin{list}" : r"\begin{list}",
+    r"\begin{math}" : r"\begin{math}",
+    r"\begin{quotation}" : r"\begin{quotation}",
+    r"\begin{quote}" : r"\begin{quote}",
+    r"\begin{sloppypar}" : r"\begin{sloppypar}",
+    r"\begin{verbatim}" : r"\begin{verbatim}",
+
+    # Corresponding \end commands (remain identical)
+    r"\end{abstract}" : r"\end{abstract}",
+    r"\end{alltt}" : r"\end{alltt}",
+    r"\end{description}" : r"\end{description}",
+    r"\end{displaymath}" : r"\end{displaymath}",
+    r"\end{document}" : r"\end{document}",
+    r"\end{enumerate}" : r"\end{enumerate}",
+    r"\end{figure}" : r"\end{figure}",
+    r"\end{flushleft}" : r"\end{flushleft}",
+    r"\end{itemize}" : r"\end{itemize}",
+    r"\end{list}" : r"\end{list}",
+    r"\end{math}" : r"\end{math}",
+    r"\end{quotation}" : r"\end{quotation}",
+    r"\end{quote}" : r"\end{quote}",
+    r"\end{sloppypar}" : r"\end{sloppypar}",
+    r"\end{verbatim}" : r"\end{verbatim}"
+
+This is a normal text paragraph. The next paragraph is a code sample::
+one asterisk: *text* for emphasis (italics),
+two asterisks: **text** for strong emphasis (boldface), and
+backquotes: ``text`` for code samples.
+
+ # Documentation markup (remain identical but now used with Sphinx)
+    ":mod:" : ":mod:",
+    ":func:" : ":func:",
+    ":data:" : ":data:",
+    ":const:" : ":const:",
+    ":class:" : ":class:",
+    ":meth:" : ":meth:",
+    ":attr:" : ":attr:",
+    ":exc:" : ":exc:",
+    ":c:data:" : ":c:data:",
+    ":c:func:" : ":c:func:",
+    ":c:macro:" : ":c:macro:",
+    ":c:type:" : ":c:type:",
+    ":token:" : ":token:",
+    ":term:" : ":term:",
+    ":productionlist:" : ":productionlist:",
+
+    # Documentation sections (reorganized in Python 3)
+    "api" : "c-api",
+    "dist" : "distutils",
+    "doc" : "documenting",
+    "ext" : "extending",
+    "inst" : "installing",
+    "lib" : "library",
+    "mac" : "library (mac-specific parts moved to using/mac.rst)",
+    "ref" : "reference",
+    "tut" : "tutorial",
+
+    # Documentation format changes
+    "TeX files" : "reStructuredText (.rst) files",
+    "Single large TeX files" : "Split into smaller .rst files",
+    "LaTeX-based documentation" : "Sphinx-based documentation"
